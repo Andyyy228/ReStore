@@ -7,7 +7,7 @@ import { Router } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import { Provider } from 'react-redux';
 import { store } from './app/store/configureStore';
-
+ 
 export const history = createBrowserHistory();
 
 const root = ReactDOM.createRoot(
