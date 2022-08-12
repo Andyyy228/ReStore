@@ -20,10 +20,10 @@ namespace API
             var context = scope.ServiceProvider.GetRequiredService<StoreContext>();
             var userManager = scope.ServiceProvider.GetRequiredService<UserManager<User>>();
             var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
-            try 
+            try
             {
                 await context.Database.MigrateAsync();
-                await DbInitializer.Initializer(context, userManager);
+                await DbInitializer.Initialize(context, userManager);
             }
             catch (Exception ex)
             {

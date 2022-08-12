@@ -8,7 +8,7 @@ namespace API.Data
 {
     public static class DbInitializer
     {
-        public static async Task Initializer(StoreContext context, UserManager<User> userManager)
+        public static async Task Initialize(StoreContext context, UserManager<User> userManager)
         {
             if (!userManager.Users.Any())
             {
@@ -28,7 +28,7 @@ namespace API.Data
                 };
 
                 await userManager.CreateAsync(admin, "Pa$$w0rd");
-                await userManager.AddToRolesAsync(admin, new[] {"Member", "Admin"});
+                await userManager.AddToRolesAsync(admin, new[] { "Member", "Admin" });
             }
 
             if (context.Products.Any()) return;
