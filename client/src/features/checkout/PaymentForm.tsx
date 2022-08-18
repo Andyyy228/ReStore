@@ -2,7 +2,7 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import { useFormContext } from 'react-hook-form';
-import AppTextInput from './AppTextInput';
+import AppTextInput from '../../app/components/AppTextInput';
 import { CardCvcElement, CardExpiryElement, CardNumberElement } from '@stripe/react-stripe-js';
 import { StripeInput } from './StripeInput';
 import { StripeElementType } from '@stripe/stripe-js';
